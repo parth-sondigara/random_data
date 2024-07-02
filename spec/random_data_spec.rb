@@ -1,11 +1,21 @@
 # frozen_string_literal: true
 
-RSpec.describe RandomData do
-  it "has a version number" do
-    expect(RandomData::VERSION).not_to be nil
+require "spec_helper"
+
+RSpec.describe RandomData::Generator do
+  it "generates a random name" do
+    expect(RandomData::Generator.random_name).to be_a(String)
   end
 
-  it "does something useful" do
-    expect(false).to eq(true)
+  it "generates a random address" do
+    expect(RandomData::Generator.random_address).to be_a(String)
+  end
+
+  it "generates a random email" do
+    expect(RandomData::Generator.random_email).to match(/\A[^@\s]+@[^@\s]+\z/)
+  end
+
+  it "generates a random phone number" do
+    expect(RandomData::Generator.random_phone_number).to be_a(String)
   end
 end
