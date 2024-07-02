@@ -1,4 +1,4 @@
-# RandomData
+# RandomDataGenerator
 
 A gem for generating random data for use in development and testing.
 
@@ -7,5 +7,5 @@ A gem for generating random data for use in development and testing.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'random_data'
+gem 'random_data_generator'
 

@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require_relative "random_data/version"
+require_relative "random_data_generator/version"
 
-module RandomData
+module RandomDataGenerator
   class Error < StandardError; end
 
   class Generator

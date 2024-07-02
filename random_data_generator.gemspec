@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
-require_relative "lib/random_data/version"
+require_relative "lib/random_data_generator/version"
 
 Gem::Specification.new do |spec|
   spec.name = "random_data_generator"
-  spec.version = RandomData::VERSION
-  spec.authors = ["Parth ROR"]
+  spec.version = RandomDataGenerator::VERSION
+  spec.authors = ["Parth Sondigara"]
   spec.email = ["prs@taglineinfotech.com"]
   spec.summary = "A gem for generating random data for development and testing."
   spec.description = "This gem provides methods for generating random names, addresses, email addresses, and other common data types."
@@ -21,12 +21,8 @@ Gem::Specification.new do |spec|
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
-  spec.files = Dir.chdir(__dir__) do
-    `git ls-files -z`.split("\x0").reject do |f|
-      (File.expand_path(f) == __FILE__) ||
-        f.start_with?(*%w[bin/ test/ spec/ features/ .git .github appveyor Gemfile])
-    end
-  end
+  spec.files = Dir["lib/**/*", "README.md", "LICENSE.txt", "random_data_generator.gemspec"]
+
   spec.bindir = "exe"
   spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]

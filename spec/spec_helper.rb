@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "random_data"
+require "random_data_generator"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
